@@ -1,0 +1,29 @@
+<div *ngIf="authService.isLoggedIn(); else notLoggedIn">
+    <h2>User Dashboard</h2>
+  
+    <!-- Loading State -->
+    <div *ngIf="isLoading" class="loading">Loading users...</div>
+  
+    <div *ngIf="!isLoading">
+      <!-- CSS Grid Layout for Users -->
+      <div class="user-grid">
+        <div *ngFor="let user of users" class="user-card">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{ user.name.firstname | titlecase }} {{ user.name.lastname | titlecase }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Email: {{ user.email }}</p>
+              <p>Phone: {{ user.phone }}</p>
+              <p>Address: {{ user.address.city }}, {{ user.address.street }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #notLoggedIn>
+    <p>You must be logged in to view the dashboard.</p>
+  </ng-template>
+  
