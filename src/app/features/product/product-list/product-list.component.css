@@ -1,0 +1,26 @@
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 16px;
+  padding: 16px;
+}
+
+.product-card {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center the text */
+}
+
+.product-card img {
+  width: 100%; /* Ensure all images fit inside the card */
+  height: 200px; /* Fixed height to maintain uniformity */
+  object-fit: contain; /* Ensure images are not cropped */
+  border-radius: 8px; /* Optional: Makes images look cleaner */
+}
+
+mat-card-content {
+  flex-grow: 1;
+}

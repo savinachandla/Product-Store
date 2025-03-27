@@ -1,0 +1,39 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2; /* Navbar background color */
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white; /* Logo text color */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .spacer {
+    flex-grow: 1;
+  }
+  
+  .nav-links a {
+    color: white; /* Default link color */
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .nav-links a.active-link {
+    font-weight: bold;
+    color: #ff9800; /* Active link color (e.g., yellow) */
+  }
+  
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #ffeb3b; /* Color when hovered */
+  }
+  

@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <span class="logo">My Product Store</span>
+  <span class="spacer"></span>
+  <nav class="nav-links">
+    <a mat-button routerLink="/" routerLinkActive="active-link">Home</a>
+    <a mat-button routerLink="/cart" routerLinkActive="active-link">Cart</a>
+
+    <!-- Show Add Product and Dashboard links only for logged-in users -->
+    <a mat-button routerLink="/add-product" routerLinkActive="active-link">Add Product</a>
+    <a mat-button routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+
+    <!-- Show Logout link if logged in -->
+    <a mat-button *ngIf="authService.isLoggedIn()" (click)="logout()">Logout</a>
+  </nav>
+</mat-toolbar>
